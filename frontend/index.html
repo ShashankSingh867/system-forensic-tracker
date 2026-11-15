@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Forensic Tracker — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>🔍 FORENSIC TRACKER</h2>
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="processes.html">Processes</a>
+    <a href="files.html">File Events</a>
+    <a href="network.html">Network Events</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="timeline.html">Timeline</a>
+  </nav>
+  <main class="main">
+    <h1>Dashboard Overview</h1>
+    <div class="cards">
+      <div class="card"><h3>Total Processes</h3><div class="num" id="card-processes">0</div></div>
+      <div class="card"><h3>File Events</h3><div class="num" id="card-files">0</div></div>
+      <div class="card"><h3>Network Events</h3><div class="num" id="card-network">0</div></div>
+      <div class="card"><h3>Alerts</h3><div class="num" id="card-alerts">0</div></div>
+    </div>
+    <h1>Recent Alerts</h1>
+    <div id="alerts-table"></div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

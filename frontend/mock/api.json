@@ -1,0 +1,22 @@
+{
+  "processes": [
+    {"pid":1000,"process_name":"explorer.exe","parent_pid":null,"username":"alice","start_time":"2026-10-15 10:00","status":"running"},
+    {"pid":1001,"process_name":"chrome.exe","parent_pid":1000,"username":"alice","start_time":"2026-10-15 10:02","status":"running"},
+    {"pid":1002,"process_name":"notepad.exe","parent_pid":1000,"username":"bob","start_time":"2026-10-15 10:05","status":"running"}
+  ],
+  "file_events": [
+    {"event_id":1,"file_path":"C:/watched/shashank.txt","event_type":"create","pid":1002,"timestamp":"2026-10-15 22:15"},
+    {"event_id":2,"file_path":"C:/watched/shashank.txt","event_type":"modify","pid":1002,"timestamp":"2026-10-15 22:16"}
+  ],
+  "network_events": [
+    {"event_id":1,"local_ip":"192.168.1.10","remote_ip":"142.250.190.46","remote_port":443,"protocol":"TCP","pid":1001,"timestamp":"2026-10-15 10:03"}
+  ],
+  "alerts": [
+    {"alert_id":1,"rule_name":"External Network Connection","severity":"High","pid":1001,"description":"Process connected to external IP 142.250.190.46","timestamp":"2026-10-15 10:03"},
+    {"alert_id":2,"rule_name":"Suspicious Child Process","severity":"Medium","pid":1002,"description":"notepad.exe spawned by user process","timestamp":"2026-10-15 10:05"}
+  ],
+  "timeline": [
+    {"event_time":"2026-10-15 10:05","severity":"Medium","rule_name":"Suspicious Child Process","process_name":"notepad.exe","description":"Spawned by explorer.exe"},
+    {"event_time":"2026-10-15 10:03","severity":"High","rule_name":"External Network Connection","process_name":"chrome.exe","description":"Connected to 142.250.190.46"}
+  ]
+}

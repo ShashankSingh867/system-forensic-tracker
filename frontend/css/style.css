@@ -1,0 +1,116 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --accent: #58a6ff;
+  --high: #ff4d4d;
+  --medium: #f0ad4e;
+  --low: #2ea043;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Consolas, monospace;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+}
+.sidebar h2 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.sidebar a:hover, .sidebar a.active {
+  background: #1f2937;
+  border-left-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 25px 35px;
+}
+.main h1 {
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 22px;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.card h3 { font-size: 13px; color: #8b949e; margin-bottom: 8px; }
+.card .num { font-size: 28px; color: var(--accent); font-weight: bold; }
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+th { background: #1f2937; color: var(--accent); }
+tr:hover { background: #1c2128; }
+
+/* Severity badges */
+.badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+.High   { background: var(--high);   color: #fff; }
+.Medium { background: var(--medium); color: #000; }
+.Low    { background: var(--low);    color: #fff; }
+
+/* Search box */
+.search {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  width: 300px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+}
+
+.Critical { background: #8b0000; color: #fff; font-weight: 900; text-transform: uppercase; border: 1px solid #ff0000; box-shadow: 0 0 10px #ff0000; }
