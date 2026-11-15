@@ -88,3 +88,5 @@ DELIMITER ;
 --     malicious_ip VARCHAR(45) NOT NULL,
 --     threat_name VARCHAR(100)
 -- );
+
+-- CREATE INDEX idx_remote_ip ON Network_Event(remote_ip);
