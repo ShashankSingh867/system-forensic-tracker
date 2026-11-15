@@ -16,8 +16,8 @@ DB_CONFIG = {
 
 def get_db():
     return mysql.connector.connect(**DB_CONFIG)
-
-@app.route('/api')
+# defines an API endpoint
+@app.route('/api') 
 def get_everything():
     try:
         conn = get_db()
