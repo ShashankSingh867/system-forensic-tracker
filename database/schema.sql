@@ -82,3 +82,9 @@ END//
 DELIMITER ;
 
 -- DBMS Phase 3: Threat Engine and Blacklist Logic Added
+
+-- CREATE TABLE IF NOT EXISTS Blacklist (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     malicious_ip VARCHAR(45) NOT NULL,
+--     threat_name VARCHAR(100)
+-- );
