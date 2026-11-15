@@ -90,3 +90,7 @@ DELIMITER ;
 -- );
 
 -- CREATE INDEX idx_remote_ip ON Network_Event(remote_ip);
+
+
+-- DBMS Update: Modified Alert severity ENUM to include 'Critical'
+-- ALTER TABLE Alert MODIFY COLUMN severity ENUM('Low','Medium','High','Critical') NOT NULL;
