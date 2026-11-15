@@ -80,3 +80,5 @@ BEGIN
     END IF;
 END//
 DELIMITER ;
+
+-- DBMS Phase 3: Threat Engine and Blacklist Logic Added
