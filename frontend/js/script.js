@@ -12,7 +12,7 @@ function logout() {
 const API_BASE = "http://localhost:5000/api";
 
 async function loadData() {
-  const res = await fetch(API_BASE);
+  const res = await fetch(API_BASE);//fetch(API_BASE) sends an HTTP GET request to Flask.
   return res.json();
 }
 
@@ -40,7 +40,7 @@ function renderTable(targetId, rows, columns) {
 
 async function init() {
   try {
-    const data = await loadData();
+    const data = await loadData();//loadData() is asynchronous, it returns a Promise, Your init() function waits for that Promise using await.
     
     const nameEl = document.getElementById('user-name');
     if (nameEl) nameEl.textContent = localStorage.getItem('username') || 'Admin';
