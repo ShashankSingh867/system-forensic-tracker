@@ -26,3 +26,5 @@ Process management · PCB · Parent-child processes · File system · I/O · Use
 ## DBMS Concepts Covered
 
 ER model · 3NF · PK/FK · Constraints · Indexes · Views · Triggers · JOINs · Aggregation
+
+
