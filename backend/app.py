@@ -23,7 +23,7 @@ def get_everything():
         conn = get_db()
         cur = conn.cursor(dictionary=True)
         
-        
+        #execute defination
         cur.execute("""
             SELECT p.pid, p.process_name, p.parent_pid, u.username, p.start_time, p.status 
             FROM Process p LEFT JOIN User u ON p.user_id = u.user_id 
