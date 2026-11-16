@@ -11,3 +11,5 @@ config.py
 
 # Node modules (if any)
 node_modules/
+
+.idea

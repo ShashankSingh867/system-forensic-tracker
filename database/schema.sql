@@ -35,21 +35,7 @@ CREATE TABLE File_Event (
     INDEX idx_file_time (timestamp)
 ) ENGINE=InnoDB;
 
-CREATE TABLE Network_Event (
-    event_id INT AUTO_INCREMENT PRIMARY KEY,
-    pid INT,
-    user_id INT,
-    local_ip VARCHAR(45),
-    remote_ip VARCHAR(45),
-    local_port INT,
-    remote_port INT,
-    protocol ENUM('TCP','UDP','OTHER') DEFAULT 'TCP',
-    status VARCHAR(30) DEFAULT 'ESTABLISHED',
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_net_process FOREIGN KEY (pid) REFERENCES Process(pid) ON DELETE SET NULL,
-    CONSTRAINT fk_net_user FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE SET NULL,
-    INDEX idx_net_time (timestamp)
-) ENGINE=InnoDB;
+
 
 CREATE TABLE Alert (
     alert_id INT AUTO_INCREMENT PRIMARY KEY,
